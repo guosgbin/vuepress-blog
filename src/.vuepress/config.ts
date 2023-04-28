@@ -2,7 +2,7 @@ import { defineUserConfig } from "vuepress";
 import { hopeTheme, photoSwipe } from "vuepress-theme-hope";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/vuepress-test/",
 
   // 设置正在使用的语言
   lang: "zh-CN",
