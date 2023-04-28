@@ -38,8 +38,6 @@ jobs:
         run: |-
           pnpm run docs:build
           > src/.vuepress/dist/.nojekyll
-      - name: 输出 ACCESS_TOKEN
-        run: echo ${{ secrets.VUEPRESS_TOKEN }}
 
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
