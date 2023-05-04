@@ -2,8 +2,6 @@
 title: 21-线程池体系-ScheduledThreadPoolExecutor
 ---
 
-
-
 | 版本 | 内容 | 时间                   |
 | ---- | ---- | ---------------------- |
 | V1   | 新建 | 2022年10月17日23:06:45 |
@@ -55,8 +53,6 @@ public ScheduledThreadPoolExecutor(int corePoolSize,
 - maximumPoolSize 参数的值都是给的 Integer.MAX_VALUE；
 - 线程的空闲超时时间 keepAliveTime 给的都是 0；
 - 阻塞队列都是指定的优先队列 DelayedWorkQueue（最小堆）；
-
-
 
 ### ScheduledExecutorService 接口
 
@@ -149,10 +145,8 @@ int heapIndex;
   1. period > 0：表示固定速率的周期任务，scheduleAtFixedRate 提交的，不考虑任务的执行时间；
   2. period < 0：表示固定延迟的周期任务，scheduleWithFixedDelay 提交的，考虑任务的执行时间；
   3. period = 0：表示执行一次的延迟任务；
-- RunnableScheduledFuture<V> outerTask：周期任务需要重新入队，就是将 outerTask 入队；
+- `RunnableScheduledFuture<V> outerTask`：周期任务需要重新入队，就是将 outerTask 入队；
 - int heapIndex：调度线程池的阻塞队列是最小堆的优先队列，heapIndex 表示当前任务在最小堆中的索引；
-
-
 
 核心方法 ScheduledFutureTask#run 分析
 
@@ -504,4 +498,3 @@ ScheduledThreadPoolExecutor 调度线程池是对普通线程池 ThreadPoolExecu
 线程的阻塞是通过 AQS 的条件队列来实现的。
 
 还有一个是 maximumPoolSize 这个参数对 ScheduledThreadPoolExecutor 是没有任何作用的。
-

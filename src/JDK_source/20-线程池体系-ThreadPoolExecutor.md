@@ -2,8 +2,6 @@
 title: 20-线程池体系-ThreadPoolExecutor
 ---
 
-
-
 | 版本 | 内容                     | 时间                   |
 | ---- | ------------------------ | ---------------------- |
 | V1   | 新建                     | 2021年03月12日23:09:11 |
@@ -11,17 +9,17 @@ title: 20-线程池体系-ThreadPoolExecutor
 
 ## 线程池的优势
 
-<font color='purple'><b>降低资源消耗</b></font>
+<b>降低资源消耗</b>
 
 我们知道，线程在Java堆里面是一个对象，也是操作系统的一部分资源，线程创建、销毁需要时间。如果创建线程加上销毁的时间大于执行任务的时间就很不划算了。所以，**线程池通过重复利用已创建的线程降低线程创建和销毁造成的消耗**。
 
 Java对象占用堆内存，操作系统线程占用系统的内存，根据JVM虚拟机的规范，一个线程默认最大的是1M，我们可以通过-xss去修改，这个栈空间是需要内存分配的，**线程的增加，必然增加内存的消耗，所以线程不是越多越好**。
 
-<font color='purple'><b>提高响应速度</b></font>
+<b>提高响应速度</b>
 
 当任务到达时，任务可以不需要等到线程创建就能立即执行。
 
-<font color='purple'><b>提高线程的可管理性</b></font>
+<b>提高线程的可管理性</b>
 
 **线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控**。
 
@@ -35,14 +33,14 @@ Java对象占用堆内存，操作系统线程占用系统的内存，根据JVM�
 
 ### 引入
 
-ThreadPoolExecutor 类是 ExecutorService 接口的一个实现，提交的任务由线程池中的线程来执行。<font color='green'><b>线程池工厂 Executors 可以用来创建各种已经配置好参数的线程池。</b></font>
+ThreadPoolExecutor 类是 ExecutorService 接口的一个实现，提交的任务由线程池中的线程来执行。<b>线程池工厂 Executors 可以用来创建各种已经配置好参数的线程池。</b>
 
 线程池的引入主要解决下面的问题：
 
-1. 线程池<font color='green'><b>提高了执行大量异步任务的性能，减少了每个任务的调用开销</b></font>，
+1. 线程池<b>提高了执行大量异步任务的性能，减少了每个任务的调用开销</b>，
 2. 给线程提供了限制和管理的一些措施。线程池还提供了一些统计功能，例如线程池总共完成了多少个任务等。
 
-<font color='green'><b>ThreadPoolExecutor提供了多个可配置的参数和大量的钩子方法，钩子方法可以由子类实现来完成扩展</b></font>。例如在执行任务前调用的 beforeExecute 方法，执行任务后调用的 afterExecute 方法等。
+<b>ThreadPoolExecutor提供了多个可配置的参数和大量的钩子方法，钩子方法可以由子类实现来完成扩展</b>。例如在执行任务前调用的 beforeExecute 方法，执行任务后调用的 afterExecute 方法等。
 
 ### 核心线程数和最大线程数
 
@@ -104,7 +102,7 @@ public int prestartAllCoreThreads() {
 
 ### 线程池存活时间
 
-- <font color='green'>如果线程池当前拥有的线程个数大于核心线程数 corePoolSize，多出的线程会在空闲超过过期时间 keepAliveTime 时被杀死，有效减少了线程池的资源消耗</font>。
+- 如果线程池当前拥有的线程个数大于核心线程数 corePoolSize，多出的线程会在空闲超过过期时间 keepAliveTime 时被杀死，有效减少了线程池的资源消耗。
 - 默认情况下，这个超时时间是针对超过核心线程数之外的线程，我们可以使用 allowCoreThreadTimeOut 方法设置核心线程也可以超时。
 
 ```java
@@ -125,9 +123,9 @@ public void allowCoreThreadTimeOut(boolean value) {
 
 可以使用任何阻塞队列BlockingQueue来传输和保存提交的任务。
 
-- 如果<font color='green'>线程池的线程个数小于核心线程数 corePoolSize，此时来了新任务时会新创建一个线程去执行</font>，而不是放到任务队列。
-- 如果<font color='green'>线程池的线程个数大于核心线程数 corePoolSize，此时来了新任务时会将任务入队</font>，而不是创建新线程去执行。
-- 如果<font color='green'>一个任务无法入队，假如当前线程池的线程个数小于最大线程数 maximumPoolSize，此时会创建一个新线程去执行此任务，否则执行拒绝策略</font>。
+- 如果线程池的线程个数小于核心线程数 corePoolSize，此时来了新任务时会新创建一个线程去执行，而不是放到任务队列。
+- 如果线程池的线程个数大于核心线程数 corePoolSize，此时来了新任务时会将任务入队，而不是创建新线程去执行。
+- 如果一个任务无法入队，假如当前线程池的线程个数小于最大线程数 maximumPoolSize，此时会创建一个新线程去执行此任务，否则执行拒绝策略。
 
 
 
@@ -163,10 +161,10 @@ public void allowCoreThreadTimeOut(boolean value) {
 
 有4个预定义的拒绝策略：
 
-1. **默认的拒绝策略**，ThreadPoolExecutor.AbortPolicy，<font color='green'><b>在拒绝的时候抛出一个运行时异常</b></font>。
+1. **默认的拒绝策略**，ThreadPoolExecutor.AbortPolicy，<b>在拒绝的时候抛出一个运行时异常</b>。
 2. ThreadPoolExecutor.CallerRunsPolicy，假如线程池还未关闭，让调用 execute 方法的线程直接去执行 run 方法，否则不执行。
-3. ThreadPoolExecutor.DiscardPolicy，<font color='green'><b>这个拒绝策略，什么都没做。其实就是把任务抛弃了</b></font>。
-4. ThreadPoolExecutor.DiscardOldestPolicy，用于被拒绝任务的处理程序，它放弃最旧的未处理请求，也就是<font color='green'><b>让最旧的任务出队，自己入队，然后重试 execute 。如果执行程序已关闭，在这种情况下，任务将被丢弃</b></font>。
+3. ThreadPoolExecutor.DiscardPolicy，<b>这个拒绝策略，什么都没做。其实就是把任务抛弃了</b>。
+4. ThreadPoolExecutor.DiscardOldestPolicy，用于被拒绝任务的处理程序，它放弃最旧的未处理请求，也就是<b>让最旧的任务出队，自己入队，然后重试 execute 。如果执行程序已关闭，在这种情况下，任务将被丢弃</b>。
 
 
 
@@ -370,7 +368,7 @@ ctl 按照位数分隔表示了两个属性：
 
 ctl 是 int 类型的数，前面 3 位表示线程池的状态，后面 29 为表示有效线程的个数。也就说最多`(2 ^ 29) - 1` (大约5个亿)个线程。
 
-> 注意：<font color='green'><b>wokerCount表示正在运行没有停止的的线程的个数，该值可能暂时不等于实际的活动线程数</b></font>。
+> 注意：<b>wokerCount表示正在运行没有停止的的线程的个数，该值可能暂时不等于实际的活动线程数</b>。
 
 
 
@@ -484,7 +482,7 @@ TERMINATED：`01100000 00000000 00000000 00000000`;
 
 
 
-<font color='purple'><b>获取或组装 ctl 变量中代表线程池状态 runState 和线程个数 workCount 部分的值</b></font>
+<b>获取或组装 ctl 变量中代表线程池状态 runState 和线程个数 workCount 部分的值</b>
 
 **（1）获取 ctl 中表示当前线程池运行状态的值，高三位**
 
@@ -521,7 +519,7 @@ private static int ctlOf(int rs, int wc) {
 
 
 
-<font color='purple' ><b>比较线程池各个状态的值的大小的方法</b></font>
+<b>比较线程池各个状态的值的大小的方法</b>
 
 ` RUNNING < SHUTDOWN < STOP < TIDYING < TERMINATED`
 
@@ -550,7 +548,7 @@ private static boolean isRunning(int c) {
 
 
 
-<font color='purple' ><b>CAS 更新线程池线程个数的方法</b></font>
+<b>CAS 更新线程池线程个数的方法</b>
 
 ```java
 /**
@@ -582,9 +580,9 @@ private void decrementWorkerCount() {
 
 ## 其他属性
 
-- BlockingQueue<Runnable> workQueue：阻塞队列；
+- `BlockingQueue<Runnable> workQueue`：阻塞队列；
 - ReentrantLock mainLock：全局锁；
-- HashSet<Worker> workers：所有工作线程的 set 池子（只能在 mainLock 下访问）；
+- `HashSet<Worker> workers`：所有工作线程的 set 池子（只能在 mainLock 下访问）；
 - Condition termination：用于线程交互，阻塞唤醒；
 -  int largestPoolSize：线程池的曾经到达过的最大工作线程个数（只能在 mainLock 下访问）；
 - long completedTaskCount：线程池完成的任务总数的近似值（只能在 mainLock 下访问）；
@@ -1146,7 +1144,7 @@ getTask返回 null 是因为当前的 worker 必须退出了，退出的可能�
 
 - 当前线程在执行任务时发生异常，需要创建一个新 worker 到线程池；
 - !workQueue.isEmpty() 说明任务队列中还有任务，最起码要留一个线程；
-- 当前线程数量 < corePoolSize值，此时会创建线程，维护线程池数量在corePoolSize个；
+- 当前线程数量小于 corePoolSize 值，此时会创建线程，维护线程池数量在corePoolSize个；
 
 ```java
 private void processWorkerExit(Worker w, boolean completedAbruptly) {

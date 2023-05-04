@@ -1114,7 +1114,7 @@ for (int i = 0, bound = 0;;) {
 
 创建好 nextTable 数组后就开始分配线程负责的迁移桶位区间，假如此次步长是 16，那么分的区间如下：
 
-<img src="../画图/导出文件/43-ConcurrentHashMap扩容-划分迁移区间.png" alt="43-ConcurrentHashMap扩容-划分迁移区间" style="zoom:67%;" />
+<img src="./26-ConcurrentHashMap源码分析/43-ConcurrentHashMap扩容-划分迁移区间.png" alt="43-ConcurrentHashMap扩容-划分迁移区间" style="zoom:67%;" />
 
 这里并不是一次性全部分配完毕，会从高至低每次给线程分配 16 个桶位，当一个线程分配到一个桶位区间时，就回去迁移数据。
 

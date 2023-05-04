@@ -133,7 +133,7 @@ LongAdderTest.testLongAdder             100  avgt    5   144.265 ±   8.867  ms/
 
 
 
-<img src="../画图/JMH Visual Chart.png" alt="JMH Visual Chart" style="zoom:80%;" />
+<img src="./06-高性能原子类LongAdder/JMH-Visual-Chart.png" alt="JMH Visual Chart" style="zoom:80%;" />
 
 可以看到在单个线程的时候，AtomicLong 的性能是比 LongAdder 要好的，因为 LongAdder 的设计原因使其在单线程的情况下耗时较长。但是在多线程的情况下，LongAdder 的性能是要远远好于 AtomicLong 的，这是“以空间换时间”的。
 
