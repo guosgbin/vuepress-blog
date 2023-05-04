@@ -1,8 +1,7 @@
 ---
-home: false
-icon: home
-title: JDK源码分析
-
+title: JUC包源码分析
 ---
 
-我是大傻逼
+
+
+<AutoCatalog base='/JDK_source/' />

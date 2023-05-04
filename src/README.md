@@ -1,110 +1,49 @@
 ---
 home: true
-icon: home
-title: 大佬
-heroImage: /logo.svg
-heroText: 工程名
-tagline: 描述一下
-actions:
-  - text: How to Use 💡
-    link: /JDK_source/12-信号量Semaphore.html
-    type: primary
+# 设置页面标题，会用于路径导航、页面增强等
+title: 超威蓝猫小站
+# 主页图标 (logo) 地址，需要填入绝对路径
+# heroImage: /wallhaven-1pd1o9.jpeg
+# 主页标题
+heroText: " "
+tagline: " "
+# actions:
+#   - text: 使用指南 💡
+#     link: /zh/demo/
+#     type: primary
 
-  - text: Docs
-    link: /guide/
+#   - text: 文档
+#     link: /zh/guide/
 
 features:
-  - title: Markdown Enhance
-    icon: markdown
-    details: Add align, sup/sub script, footnote, tasklist, tex, flowchart, diagram, mark and presentation support in markdown
-    link: https://localhost:8080/JDK_source/12-信号量Semaphore.html
+  - title: JUC 源码分析
+    # icon: markdown
+    details: java.util.concurrent 并发编程包是专门为 Java 并发编程设计的，本篇主要针对其原理实现进行分析
+    link: /JDK_source
 
-#   - title: Slide page
-#     icon: slides
-#     details: Adding slide pages to display things you like
-#     link: https://theme-hope.vuejs.press/guide/layout/slides.html
+  # - title: 幻灯片页面
+  # #   icon: slides
+  #   details: 添加幻灯片页面以显示你喜欢的内容
+  # #   link: https://theme-hope.vuejs.press/zh/guide/layout/slides.html
 
-#   - title: Layout enhancement
-#     icon: layout
-#     details: Adding breadcrumb, footer, improved navbar, improved page nav and etc.
-#     link: https://theme-hope.vuejs.press/guide/layout/
+  # - title: 幻灯片页面
+  # #   icon: slides
+  #   details: 添加幻灯片页面以显示你喜欢的内容
+  # #   link: https://theme-hope.vuejs.press/zh/guide/layout/slides.html
 
-#   - title: Pageviews and comments
-#     icon: comment
-#     details: Start pageview statistics and comment support with Waline
-#     link: https://theme-hope.vuejs.press/guide/feature/comment.html
+  # - title: 幻灯片页面
+  # #   icon: slides
+  #   details: 添加幻灯片页面以显示你喜欢的内容
+  # #   link: https://theme-hope.vuejs.press/zh/guide/layout/slides.html
 
-#   - title: Article information
-#     icon: info
-#     details: Add author, writing date, reading time, word count and other information to your article
-#     link: https://theme-hope.vuejs.press/guide/feature/page-info.html
+  # - title: 幻灯片页面
+  # #   icon: slides
+  #   details: 添加幻灯片页面以显示你喜欢的内容
+  # #   link: https://theme-hope.vuejs.press/zh/guide/layout/slides.html
 
-#   - title: Blog support
-#     icon: blog
-#     details: Listing your articles with their dates, tags and categories with some awesome layouts
-#     link: https://theme-hope.vuejs.press/guide/blog/
-
-#   - title: Custom theme color
-#     icon: palette
-#     details: Supports custom theme colors and allows users to switch between preset theme colors
-#     link: https://theme-hope.vuejs.press/guide/interface/theme-color.html
-
-#   - title: Dark Mode
-#     icon: contrast
-#     details: Switch between light and dark modes freely
-#     link: https://theme-hope.vuejs.press/guide/interface/darkmode.html
-
-#   - title: Full A11y support
-#     icon: support
-#     details: Full support of accessibility in your site
-#     link: https://theme-hope.vuejs.press/guide/interface/accessibility.html
-
-#   - title: Article Encryption
-#     icon: lock
-#     details: Encrypt you articles based on page links, so that only the one you want could see them
-#     link: https://theme-hope.vuejs.press/guide/feature/encrypt.html
-
-#   - title: Copy button
-#     icon: copy
-#     details: Copy codes with one click in code blocks
-#     link: https://theme-hope.vuejs.press/guide/feature/copy-code.html
-
-#   - title: Image preview
-#     icon: pic
-#     details: Support viewing, zooming, sharing your page images like a gallery
-#     link: https://theme-hope.vuejs.press/guide/feature/photo-swipe.html
-
-#   - title: SEO enhancement
-#     icon: config
-#     details: Optimize pages for search engines
-#     link: https://theme-hope.vuejs.press/guide/advanced/seo.html
-
-#   - title: Sitemap
-#     icon: sitemap
-#     details: Generate a Sitemap for your site
-#     link: https://theme-hope.vuejs.press/guide/advanced/sitemap.html
-
-#   - title: Feed support
-#     icon: rss
-#     details: Generate feed to allow users to subscribe it
-#     link: https://theme-hope.vuejs.press/guide/advanced/feed.html
-
-#   - title: PWA support
-#     icon: mobile
-#     details: Make your site more like an APP
-#     link: https://theme-hope.vuejs.press/guide/advanced/pwa.html
-
-#   - title: More new features
-#     icon: more
-#     details: Including icon support, fullscreen button, etc.
-#     link: https://theme-hope.vuejs.press/guide/feature/
-
-# copyright: false
-# footer: Theme by <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> | MIT Licensed, Copyright © 2019-present Mr.Hope
+copyright: false
+footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | 超威蓝猫 Dylan Kwok 
 ---
 
-This is an example of a project homepage. You can place your main content here.
-
-To use this layout, you need to set `home: true` in the page front matter.
-
-For related descriptions of configuration items, please see [Project HomePage Layout Config](https://theme-hope.vuejs.press/guide/layout/home/).
+<!-- <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg?font-size=25&spacing=3 &color=grey" style="max-width:100%; display: block; margin: 0 auto;"> -->
+<!-- <img src="/wallhaven-1pd1o9.jpeg" style="max-width:100%; display: block; margin: 0 auto;> -->

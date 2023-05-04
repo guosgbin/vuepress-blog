@@ -1,5 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { hopeTheme, photoSwipe } from "vuepress-theme-hope";
+import { autoCatalogPlugin } from "vuepress-plugin-auto-catalog";
+
 
 export default defineUserConfig({
   base: "/",
@@ -18,13 +20,13 @@ export default defineUserConfig({
         "email": "guosgbin@163.com",
       },
       // 站点图标
-      favicon: "",
+      favicon: "小熊猫.svg",
       // 导航栏
       // navbar: ["/zh/guide/README.md", "/zh/config/README.md", "/zh/faq.md"],
       navbar: [
         {
           text: "JDK源码分析",
-          link: "/JDK_source/12-信号量Semaphore.md",
+          link: "/JDK_source/README.md",
           icon: "",
         },
         { text: "Netty",
@@ -41,7 +43,7 @@ export default defineUserConfig({
         end: ["Language", "Repo", "Outlook", "Search"]
       },
       // 导航栏图标
-      logo: "logo.png",
+      logo: "小熊猫.png",
       // 夜间模式下导航栏图标
       logoDark: "",
       // 仓库链接
@@ -84,6 +86,7 @@ export default defineUserConfig({
       // 主题行为选项 (可选)
     },
   ),
+
 
   // Enable it with pwa
   // shouldPrefetch: false,
