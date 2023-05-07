@@ -24,15 +24,15 @@ export default defineUserConfig({
       // 导航栏
       // navbar: ["/zh/guide/README.md", "/zh/config/README.md", "/zh/faq.md"],
       navbar: [
-        {
-          text: "JDK源码分析",
-          link: "/JDK_source/README.md",
-          icon: "",
-        },
-        { text: "Netty",
-          link: "/zh/config/README.md", 
-          icon: "" 
-        }
+        // {
+        //   text: "JDK源码分析",
+        //   link: "/JDK_source/README.md",
+        //   icon: "",
+        // },
+        // { text: "Netty",
+        //   link: "/zh/config/README.md", 
+        //   icon: "" 
+        // }
       ],
       // 是否在导航栏中显示图标
       navbarIcon: true,
@@ -59,6 +59,7 @@ export default defineUserConfig({
       // sidebar: ["/JDK_source/12-信号量Semaphore.md"],
       sidebar: {
         "/JDK_source": "structure",
+        "/Redis": "structure",
       },
       // 是否在侧边栏显示图标
       sidebarIcon: true,
