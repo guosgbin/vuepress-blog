@@ -56,6 +56,11 @@ highlights:
       details: Redis 复制、高可用、集群、持久化等相关特性分析
       link: /Redis
 
+    - title: Mybatis 源码分析
+    #   icon: slides
+      details: 
+      link: /Mybatis_source
+
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | 超威蓝猫 Dylan Kwok 
 ---

@@ -61,6 +61,7 @@ export default defineUserConfig({
         "/JDK_source": "structure",
         "/Redis": "structure",
         "/Netty_source": "structure",
+        "/Mybatis_source": "structure",
       },
       // 是否在侧边栏显示图标
       sidebarIcon: true,
