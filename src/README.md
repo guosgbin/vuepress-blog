@@ -46,6 +46,11 @@ highlights:
       # link: https://www.yuque.com/guosgbin/netty
       link: /Netty_source
 
+    - title: Netty 第一版源码分析
+    #   icon: slides
+      details: Netty 是一个事件驱动的框架，本篇分析其核心功能，如管道、处理器、内存池等
+      link: https://www.yuque.com/guosgbin/netty
+
     - title: Spring 源码分析
     #   icon: slides
       details: 分析 Spring 核心功能，IoC、DI、AOP
