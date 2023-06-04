@@ -1,6 +1,12 @@
 // you can change colors here
-$theme-color: #096dd9;
-$sidebar-width: 20rem;
-$font-family: 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';
-// $font-family: '"Noto Serif SC", serif';
+// $theme-color: #096dd9;
+// $font-family: 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';
+$font-family: '"Noto Serif SC", serif';
 // $font-family: STKaiti;
+
+$sidebar-width: 20rem;
+$content-width: 48rem;
+
+// code
+$font-family-mono: '"JetBrains Mono"';
+$line-numbers-width: 2rem

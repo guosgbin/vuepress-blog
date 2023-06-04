@@ -60,22 +60,18 @@ export default defineUserConfig({
       sidebar: {
         "/JDK_source": "structure",
         "/Redis": "structure",
+        "/Netty_source": "structure",
       },
       // 是否在侧边栏显示图标
       sidebarIcon: true,
       // 侧边栏嵌套的标题深度。
       headerDepth: 3,
-      themeColor: {
-        blue: "#2196f3",
-        red: "#f26d6d",
-        green: "#3eaf7c",
-        orange: "#fb9b5f",
-      },
+      themeColor: true,
       plugins: {
         // 用 false 禁止复制代码
         copyCode: false,
         // 图片预览插件配置
-        photoSwipe: false,
+        photoSwipe: true,
         // 版权信息插件配置
         copyright: {
           global: true,
