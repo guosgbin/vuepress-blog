@@ -66,6 +66,12 @@ highlights:
       details: 
       link: /Mybatis_source
 
+    - title: RocketMQ 源码分析
+    #   icon: slides
+      details: 
+      link: /RocketMQ_source
+
+
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | 超威蓝猫 Dylan Kwok 
 ---
