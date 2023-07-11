@@ -68,8 +68,13 @@ highlights:
 
     - title: RocketMQ 源码分析
     #   icon: slides
-      details: 
+      details: 分析 Nameserver、Producer、Consumer 和 broker 的核心代码，例如 broker 的刷盘机制、主从同步、消息消费、事务消息等。
       link: /RocketMQ_source
+
+    - title: Java 基础
+    #   icon: slides
+      details: 目前分析了 SPI 机制
+      link: /Java_base
 
 
 copyright: false
