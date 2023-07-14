@@ -76,6 +76,11 @@ highlights:
       details: 目前分析了 SPI 机制
       link: /Java_base
 
+    - title: 《Effective Java》笔记
+    #   icon: slides
+      details: 《Effective Java》第三版
+      link: /EffectiveJava_note
+
 
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | 超威蓝猫 Dylan Kwok 

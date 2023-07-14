@@ -63,6 +63,8 @@ export default defineUserConfig({
         "/Netty_source": "structure",
         "/Mybatis_source": "structure",
         "/RocketMQ_source": "structure",
+        "/Java_base": "structure",
+        "/EffectiveJava_note": "structure",
       },
       // 是否在侧边栏显示图标
       sidebarIcon: true,
