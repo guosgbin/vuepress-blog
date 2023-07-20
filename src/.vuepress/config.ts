@@ -81,7 +81,15 @@ export default defineUserConfig({
           global: true,
           disableCopy: true,
         },
-      }
+      },
+      encrypt: {
+        config: {
+          // 这会加密整个 guide 目录，并且两个密码都是可用的
+          // "/guide/": ["1234", "5678"],
+          // 这只会加密 config/page.html
+          "/test/HowToSayResume.html": "2359859905",
+        },
+      },
     },
     {
       // 主题行为选项 (可选)
