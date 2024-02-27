@@ -81,6 +81,10 @@ highlights:
       details: 《Effective Java》第三版
       link: /EffectiveJava_note
 
+    - title: 个人总结的面试问题
+    #   icon: slides
+      details: 
+      link: /interviewQA
 
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | 超威蓝猫 Dylan Kwok 
