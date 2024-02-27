@@ -50,4 +50,4 @@ jobs:
           branch: gh-pages
           folder: src/.vuepress/dist
           # 引用您在 GitHub Secrets 中存储的 PAT
-          token: ${{ secrets.VUEPRESS_TOKEN }}
+          # token: ${{ secrets.VUEPRESS_TOKEN }}
