@@ -67,6 +67,7 @@ export default defineUserConfig({
         "/EffectiveJava_note": "structure",
         "/interviewQA": "structure",
         "/business_issue_accumulations": "structure",
+        "/leetcode_record": "structure",
       },
       // 是否在侧边栏显示图标
       sidebarIcon: true,

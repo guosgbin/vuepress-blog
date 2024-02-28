@@ -91,6 +91,14 @@ highlights:
       details: 直播间业务、IM业务沉淀，线上问题总结
       link: /business_issue_accumulations
 
+    - title: leetcode题目分类
+    #   icon: slides
+      details: 二叉树、二分查找、滑动窗口等
+      link: /leetcode_record
+
+
+
+
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | 超威蓝猫 Dylan Kwok 
 ---
