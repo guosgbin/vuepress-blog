@@ -66,6 +66,7 @@ export default defineUserConfig({
         "/Java_base": "structure",
         "/EffectiveJava_note": "structure",
         "/interviewQA": "structure",
+        "/business_issue_accumulations": "structure",
       },
       // 是否在侧边栏显示图标
       sidebarIcon: true,

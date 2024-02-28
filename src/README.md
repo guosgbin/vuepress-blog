@@ -86,6 +86,11 @@ highlights:
       details: 
       link: /interviewQA
 
+    - title: 业务沉淀&线上问题总结
+    #   icon: slides
+      details: 直播间业务、IM业务沉淀，线上问题总结
+      link: /business_issue_accumulations
+
 copyright: false
 footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | 超威蓝猫 Dylan Kwok 
 ---
