@@ -81,7 +81,7 @@ highlights:
       details: 《Effective Java》第三版
       link: /EffectiveJava_note
 
-    - title: 个人总结的面试问题
+    - title: 个人总结的面试QA
     #   icon: slides
       details: 
       link: /interviewQA
