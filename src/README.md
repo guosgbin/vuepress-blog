@@ -83,7 +83,7 @@ highlights:
 
     - title: 个人总结的面试QA
     #   icon: slides
-      details: 
+      details: jvm、mysql、redis、juc等
       link: /interviewQA
 
     - title: 业务沉淀&线上问题总结
