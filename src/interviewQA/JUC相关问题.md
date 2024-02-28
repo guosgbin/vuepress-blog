@@ -1,3 +1,7 @@
+---
+title: 并发编程和JUC相关问题
+---
+
 ## 内存模型相关
 
 ### 物理硬件和操作系统的内存模型
@@ -8,7 +12,7 @@
 
 ### Java 内存模型-主内存和工作内存
 
-<img src="JUC相关问题/java-jmm-1.png" alt="img"  />
+<img src="./JUC相关问题/java-jmm-1.png" alt="img"  />
 
 1. 此处的变量含义是，实例字段、静态字段和构成数组对象的元素，但是不包括局部变量和方法参数，因为后者是线程私有的；
 2. **Java 内存模型**规定了**所有的变量都存在主存**，每个**线程**又自己的**工作内存**，线程的工作内存保存了被该线程使用的**变量的主内存副本**（这个对象的引用、对象中某个线程访问到的字段有可能是被复制的，但是不会把虚拟机整个对象复制一次），**线程对变量的所有操作（读取、赋值等）都必须在工作内存中进行**，而不能直接读写主存中的数据。不同的线程之间也无法直接访问对方工作内存中的变量，线程建变量值的传递均需要通过主存来完成；
@@ -99,7 +103,7 @@
 
 ## 线程的状态以及状态转换
 
-<img src="JUC相关问题/ace830df-9919-48ca-91b5-60b193f593d2.png" alt="image"  />
+<img src="./JUC相关问题/ace830df-9919-48ca-91b5-60b193f593d2.png" alt="image"  />
 
 - **新建(New)**：创建后尚未启动。
 
@@ -411,7 +415,7 @@ AQS 中有两个队列，一个是等待队列，一个是 Condition 条件队�
 
 等待队列和 Condition 队列的内部属性 🔽
 
-<img src="JUC相关问题/java-thread-x-juc-aqs-1.png" alt="image"  />
+<img src="./JUC相关问题/java-thread-x-juc-aqs-1.png" alt="image"  />
 
 ### AQS 的同步资源是什么？
 
@@ -825,7 +829,7 @@ ctl 是 int 类型的数，前面 3 位表示线程池的状态，后面 29 位�
 
 线程池状态：
 
-<img src="JUC相关问题/62853fa44bfa47d63143babe3b5a4c6e82532.png" alt="img" style="zoom:67%;" />
+<img src="./JUC相关问题/62853fa44bfa47d63143babe3b5a4c6e82532.png" alt="img" style="zoom:67%;" />
 
 **线程池生命周期（衍生问题：shutdown 方法和 shutdownNow 方法的区别是什么？）**
 
@@ -859,7 +863,7 @@ ctl 是 int 类型的数，前面 3 位表示线程池的状态，后面 29 位�
 
 线程池生命周期转换：
 
-<img src="JUC相关问题/582d1606d57ff99aa0e5f8fc59c7819329028-7989865.png" alt="图3 线程池生命周期"  />
+<img src="./JUC相关问题/582d1606d57ff99aa0e5f8fc59c7819329028-7989865.png" alt="图3 线程池生命周期"  />
 
 ### 你们项目中拒绝策略是怎么样的？直接丢弃？（重要！）
 
@@ -1009,7 +1013,7 @@ Netty 的实现相较于调用者执行策略的使用面就可以扩展到支�
 
 ### 线程池的执行原理（重要！）
 
-<img src="JUC相关问题/77441586f6b312a54264e3fcf5eebe2663494.png" alt="图2 ThreadPoolExecutor运行流程"  />
+<img src="./JUC相关问题/77441586f6b312a54264e3fcf5eebe2663494.png" alt="图2 ThreadPoolExecutor运行流程"  />
 
 1. 线程池里面有几个重要的参数核心线程数、最大线程数、任务队列、拒绝策略；
 2. 我们使用线程池是调用它的 execute 和 submit 方法来提交任务；
@@ -1174,7 +1178,7 @@ CopyOnWriteArrayList 的写操作都是需要使用 ReentrantLock 进行同步�
 
 ## ConcurrentSkipListMap
 
-<img src="JUC相关问题/29-跳表概述-2194186c.png" alt="29-跳表概述" style="zoom:67%;" />
+<img src="./JUC相关问题/29-跳表概述-2194186c.png" alt="29-跳表概述" style="zoom:67%;" />
 
 先从单链表说起，单链表就是维护了一个指向后继节点的指针，可以通过前一个节点找到后面的节点。查找元素的效率很低，**平均时间复杂度 O(n)**。
 
@@ -1199,7 +1203,7 @@ ConcurrentSkipListMap 中有三种节点
 
 插入元素到跳表的示意图，（来自维基百科）
 
-![30-跳表插入元素动态图](../../../第二笔记/JDK源码/JUC包/笔记/24-ConcurrentSkipListMap跳表/30-跳表插入元素动态图.gif)
+<img src="./JUC相关问题/30-跳表插入元素动态图.gif" alt="30-跳表插入元素动态图"  />
 
 ## ConcurrentHashMap 1.8
 

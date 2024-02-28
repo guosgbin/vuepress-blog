@@ -65,6 +65,7 @@ export default defineUserConfig({
         "/RocketMQ_source": "structure",
         "/Java_base": "structure",
         "/EffectiveJava_note": "structure",
+        "/interviewQA": "structure",
       },
       // 是否在侧边栏显示图标
       sidebarIcon: true,
@@ -73,7 +74,7 @@ export default defineUserConfig({
       themeColor: true,
       plugins: {
         // 用 false 禁止复制代码
-        copyCode: false,
+        // copyCode: false,
         // 图片预览插件配置
         photoSwipe: true,
         // 版权信息插件配置
