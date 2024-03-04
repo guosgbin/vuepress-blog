@@ -453,7 +453,7 @@ public T getExtension(String name, boolean throwWhenNotFound) {
 
 简单看一下 motan-core 包下的 `META-INF/services/` 中有多少个 LoadBalance 的实现类。
 
-![image-20230711191248797](../../../第二笔记/Java基础/SPI机制/image-20230711191248797-9073970.png)
+<img src="./HowToSayResume/image-20230711191248797-9073970.png" alt="image-20230711191248797" style="zoom:100%;" />
 
 关于 Motan、Dubbo 的 SPI 机制后面有机会再详细分析。
 
